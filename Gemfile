@@ -7,9 +7,6 @@ gem 'rails', '4.1.0'
 #Use sqlite as the database for Active Record
 gem 'sqlite3', group: [:development, :test]
 
-#Use bootstrap library for styles
-gem 'bootstrap-sass', '3.3.1'
-
 group :production do
   gem 'pg'
   gem 'rails_12factor'
@@ -19,6 +16,14 @@ gem 'sass-rails', '4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
+
+#Use bootstrap library for styles
+gem 'bootstrap-sass', '3.3.1'
+
+#Use font awesome library for icons
+gem 'font-awesome-sass', '4.2.0'
+
+#Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.1'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby

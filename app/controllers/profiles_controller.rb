@@ -45,8 +45,10 @@ class ProfilesController < ApplicationController
   
     def only_current_user
       @user = User.find(params[:user_id])
-      redirect_to(root_url) unless @user == current_user
-      flash[:warning] = "You cannot edit another user's information"
+      if @user != current_user
+        redirect_to(root_url)
+        flash[:danger] = "You cannot edit another user's information"
+      end
     end
   
 end
